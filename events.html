@@ -71,6 +71,14 @@
                                                         CoRE members act as game masters for the escape the room participants.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui right floated right labeled icon button">
+                                                        <i class="right arrow icon"></i>
+                                                        Next
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -98,6 +106,18 @@
                                                         The doors to the O'Connor great room where the event was hosted.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui left floated left labeled icon button">
+                                                        <i class="left arrow icon"></i>
+                                                        Previous
+                                                    </div>
+                                                    <div class="ui right floated right labeled icon button">
+                                                        <i class="right arrow icon"></i>
+                                                        Next
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -125,6 +145,18 @@
                                                         Edgar Allan Poe themed decorations.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui left floated left labeled icon button">
+                                                        <i class="left arrow icon"></i>
+                                                        Previous
+                                                    </div>
+                                                    <div class="ui right floated right labeled icon button">
+                                                        <i class="right arrow icon"></i>
+                                                        Next
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -152,6 +184,18 @@
                                                         Edgar Allan Poe themed decorations.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui left floated left labeled icon button">
+                                                        <i class="left arrow icon"></i>
+                                                        Previous
+                                                    </div>
+                                                    <div class="ui right floated right labeled icon button">
+                                                        <i class="right arrow icon"></i>
+                                                        Next
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -179,6 +223,18 @@
                                                         Edgar Allan Poe themed decorations.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui left floated left labeled icon button">
+                                                        <i class="left arrow icon"></i>
+                                                        Previous
+                                                    </div>
+                                                    <div class="ui right floated right labeled icon button">
+                                                        <i class="right arrow icon"></i>
+                                                        Next
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -206,6 +262,14 @@
                                                         Edgar Allan Poe themed decorations.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui left floated left labeled icon button">
+                                                        <i class="left arrow icon"></i>
+                                                        Previous
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -254,6 +318,14 @@
                                                         CoRE members instructing workshop attendees.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui right floated right labeled icon button">
+                                                        <i class="right arrow icon"></i>
+                                                        Next
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -281,6 +353,18 @@
                                                         CoRE members instructing workshop attendees.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui left floated left labeled icon button">
+                                                        <i class="left arrow icon"></i>
+                                                        Previous
+                                                    </div>
+                                                    <div class="ui right floated right labeled icon button">
+                                                        <i class="right arrow icon"></i>
+                                                        Next
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -308,6 +392,18 @@
                                                         CoRE members instructing workshop attendees.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui left floated left labeled icon button">
+                                                        <i class="left arrow icon"></i>
+                                                        Previous
+                                                    </div>
+                                                    <div class="ui right floated right labeled icon button">
+                                                        <i class="right arrow icon"></i>
+                                                        Next
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -335,6 +431,14 @@
                                                         CoRE members instructing workshop attendees.
                                                     </p>
                                                 </div>
+                                                <br>
+                                                <div class="actions">
+                                                    <div class="ui left floated left labeled icon button">
+                                                        <i class="left arrow icon"></i>
+                                                        Previous
+                                                    </div>
+                                                </div>
+                                                <br>
                                             </div>
                                         </div>
                                     </div>
@@ -387,34 +491,51 @@
     // Modals for the Escape The Room event
     $('#escape-modal-1')
       .modal('attach events', '#escape-image-1', 'show')
+      .modal('attach events', '#escape-modal-2 .ui.left.floated.left.labeled.icon.button')
     ;
     $('#escape-modal-2')
       .modal('attach events', '#escape-image-2', 'show')
+      .modal('attach events', '#escape-modal-3 .ui.left.floated.left.labeled.icon.button')
+      .modal('attach events', '#escape-modal-1 .ui.right.floated.right.labeled.icon.button')
     ;
     $('#escape-modal-3')
       .modal('attach events', '#escape-image-3', 'show')
+      .modal('attach events', '#escape-modal-4 .ui.left.floated.left.labeled.icon.button')
+      .modal('attach events', '#escape-modal-2 .ui.right.floated.right.labeled.icon.button')
     ;
     $('#escape-modal-4')
       .modal('attach events', '#escape-image-4', 'show')
+      .modal('attach events', '#escape-modal-5 .ui.left.floated.left.labeled.icon.button')
+      .modal('attach events', '#escape-modal-3 .ui.right.floated.right.labeled.icon.button')
     ;
     $('#escape-modal-5')
       .modal('attach events', '#escape-image-5', 'show')
+      .modal('attach events', '#escape-modal-6 .ui.left.floated.left.labeled.icon.button')
+      .modal('attach events', '#escape-modal-4 .ui.right.floated.right.labeled.icon.button')
     ;
     $('#escape-modal-6')
       .modal('attach events', '#escape-image-6', 'show')
+      .modal('attach events', '#escape-modal-5 .ui.right.floated.right.labeled.icon.button')
     ;
+    
     // Modals for the Coding Workshop event
     $('#coding-workshop-modal-1')
       .modal('attach events', '#coding-workshop-image-1', 'show')
+      .modal('attach events', '#coding-workshop-modal-2 .ui.left.floated.left.labeled.icon.button')
     ;
     $('#coding-workshop-modal-2')
       .modal('attach events', '#coding-workshop-image-2', 'show')
+      .modal('attach events', '#coding-workshop-modal-3 .ui.left.floated.left.labeled.icon.button')
+      .modal('attach events', '#coding-workshop-modal-1 .ui.right.floated.right.labeled.icon.button')
     ;
     $('#coding-workshop-modal-3')
       .modal('attach events', '#coding-workshop-image-3', 'show')
+      .modal('attach events', '#coding-workshop-modal-4 .ui.left.floated.left.labeled.icon.button')
+      .modal('attach events', '#coding-workshop-modal-2 .ui.right.floated.right.labeled.icon.button')
     ;
     $('#coding-workshop-modal-4')
       .modal('attach events', '#coding-workshop-image-4', 'show')
+      .modal('attach events', '#coding-workshop-modal-3 .ui.right.floated.right.labeled.icon.button')
     ;
 </script>
 </html>
