@@ -4,6 +4,16 @@
 .ui.modal > .image.content {
   display: block !important;
 }
+.ui.modal > .image {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.hard-code-centered{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
 
 .ui.modal > .content > .image {
   width: 100% !important;
