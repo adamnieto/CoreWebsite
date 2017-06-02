@@ -8,6 +8,67 @@
     <link rel="stylesheet" href="semantic/dist/semantic.css" media="screen">
     <link rel="stylesheet" href="assets/css/edits.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script>
+        // Modals for CoRE Lore
+        $('#core-lore-modal-1')
+          .modal('attach events', '#core-lore-image-1', 'show')
+          .modal('attach events', '#core-lore-modal-2 .ui.left.floated.left.labeled.icon.button')
+        ;
+        $('#core-lore-modal-2')
+          .modal('attach events', '#core-lore-image-2', 'show')
+          .modal('attach events', '#core-lore-modal-3 .ui.left.floated.left.labeled.icon.button')
+          .modal('attach events', '#core-lore-modal-1 .ui.right.floated.right.labeled.icon.button')
+        ;
+        $('#core-lore-modal-3')
+          .modal('attach events', '#core-lore-image-3', 'show')
+          .modal('attach events', '#core-lore-modal-4 .ui.left.floated.left.labeled.icon.button')
+          .modal('attach events', '#core-lore-modal-2 .ui.right.floated.right.labeled.icon.button')
+        ;
+        $('#core-lore-modal-4')
+          .modal('attach events', '#core-lore-image-4', 'show')
+          .modal('attach events', '#core-lore-modal-3 .ui.right.floated.right.labeled.icon.button')
+        ;
+
+        // Modals for CoREbecue
+        $('#corebecue-modal-1')
+          .modal('attach events', '#corebecue-image-1', 'show')
+          .modal('attach events', '#corebecue-modal-2 .ui.left.floated.left.labeled.icon.button')
+        ;
+        $('#corebecue-modal-2')
+          .modal('attach events', '#corebecue-image-2', 'show')
+          .modal('attach events', '#corebecue-modal-3 .ui.left.floated.left.labeled.icon.button')
+          .modal('attach events', '#corebecue-modal-1 .ui.right.floated.right.labeled.icon.button')
+        ;
+        $('#corebecue-modal-3')
+          .modal('attach events', '#corebecue-image-3', 'show')
+          .modal('attach events', '#corebecue-modal-4 .ui.left.floated.left.labeled.icon.button')
+          .modal('attach events', '#corebecue-modal-2 .ui.right.floated.right.labeled.icon.button')
+        ;
+        $('#corebecue-modal-4')
+          .modal('attach events', '#corebecue-image-4', 'show')
+          .modal('attach events', '#corebecue-modal-3 .ui.right.floated.right.labeled.icon.button')
+        ;
+
+        // Modals for CoRE Hacks
+        $('#core-hacks-modal-1')
+          .modal('attach events', '#core-hacks-image-1', 'show')
+          .modal('attach events', '#core-hacks-modal-2 .ui.left.floated.left.labeled.icon.button')
+        ;
+        $('#core-hacks-modal-2')
+          .modal('attach events', '#core-hacks-image-2', 'show')
+          .modal('attach events', '#core-hacks-modal-3 .ui.left.floated.left.labeled.icon.button')
+          .modal('attach events', '#core-hacks-modal-1 .ui.right.floated.right.labeled.icon.button')
+        ;
+        $('#core-hacks-modal-3')
+          .modal('attach events', '#core-hacks-image-3', 'show')
+          .modal('attach events', '#core-hacks-modal-4 .ui.left.floated.left.labeled.icon.button')
+          .modal('attach events', '#core-hacks-modal-2 .ui.right.floated.right.labeled.icon.button')
+        ;
+        $('#core-hacks-modal-4')
+          .modal('attach events', '#core-hacks-image-4', 'show')
+          .modal('attach events', '#core-hacks-modal-3 .ui.right.floated.right.labeled.icon.button')
+        ;
+    </script>
 </head>
 
 <body>
@@ -46,12 +107,12 @@
                             </div>
                             <br>
                             <!-- CoRE Lore Images -->
-                            <div class="ui four column grid">
+                            <div class="ui four column center aligned grid">
                                 <div class="column">
                                     <div class="item">
                                         <div id="core-lore-image-1" class="image content">
-                                            <div class="ui centered small bordered images">
-                                                <img src="assets/images/core-lore/core-lore-1.JPG">
+                                            <div class="ui centered small bordered stackable image">
+                                                <img src="assets/images/core-lore/core-lore-1.jpg">
                                             </div>
                                         </div>
                                         <div id="core-lore-modal-1" class="ui small modal">
@@ -59,34 +120,39 @@
                                             <div class="ui header">
                                                 CoRE Lore
                                             </div>
-                                            <div class="ui image content">
-                                                <div class="image">
-                                                    <div class="ui centered big bordered images">
-                                                        <img src="assets/images/core-lore/core-lore-1.JPG">
+                                            <br>
+                                                <!-- <div class="centered center container"> -->
+                                                <div class="ui image content">
+                                                    <div class="hard-code-centered image">
+                                                        <div class="ui centered big bordered stackable image">
+                                                            <img src="assets/images/core-lore/core-lore-1.jpg">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="description">
-                                                    <p>
-                                                        Alumnus recounting stories from his time on CoRE.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
+                                                    <div class="hard-code-centered description">
+                                                        <p>
+                                                            Alumnus recounting stories from his time on CoRE.
+                                                        </p>
                                                     </div>
+                                                    <br>
+                                                    <div class="actions">
+                                                        <div class="ui right floated right labeled icon button">
+                                                            <i class="right arrow icon"></i>
+                                                            Next
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                    <br>
                                                 </div>
-                                                <br>
-                                            </div>
+                                            <!-- </div> -->
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="core-lore-image-2" class="image content">
-                                            <div class="ui centered small bordered images">
-                                                <img src="assets/images/core-lore/core-lore-2.JPG">
+                                            <div class="ui centered small bordered stackable image">
+                                                <img src="assets/images/core-lore/core-lore-2.jpg">
                                             </div>
                                         </div>
                                         <div id="core-lore-modal-2" class="ui small modal">
@@ -95,12 +161,12 @@
                                                 CoRE Lore
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered big bordered images">
-                                                        <img src="assets/images/core-lore/core-lore-2.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered big bordered stackable image">
+                                                        <img src="assets/images/core-lore/core-lore-2.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         CoRE members and alumni eating a thanksgiving feast together.
                                                     </p>
@@ -118,14 +184,15 @@
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="core-lore-image-3" class="image content">
-                                            <div class="ui centered small bordered images">
-                                                <img src="assets/images/core-lore/core-lore-3.JPG">
+                                            <div class="ui centered small bordered stackable image">
+                                                <img src="assets/images/core-lore/core-lore-3.jpg">
                                             </div>
                                         </div>
                                         <div id="core-lore-modal-3" class="ui small modal">
@@ -134,12 +201,12 @@
                                                 CoRE Lore
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered big bordered images">
-                                                        <img src="assets/images/core-lore/core-lore-3.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered big bordered stackable image">
+                                                        <img src="assets/images/core-lore/core-lore-3.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         CoRE members and alumni eating a thanksgiving feast together.
                                                     </p>
@@ -157,14 +224,15 @@
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="core-lore-image-4" class="image content">
-                                            <div class="ui centered small bordered images">
-                                                <img src="assets/images/core-lore/core-lore-4.JPG">
+                                            <div class="ui centered small bordered stackable image">
+                                                <img src="assets/images/core-lore/core-lore-4.jpg">
                                             </div>
                                         </div>
                                         <div id="core-lore-modal-4" class="ui small modal">
@@ -173,12 +241,12 @@
                                                 CoRE Lore
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered big bordered images">
-                                                        <img src="assets/images/core-lore/core-lore-4.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered big bordered stackable image">
+                                                        <img src="assets/images/core-lore/core-lore-4.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         CoRE members and alumni playing games.
                                                     </p>
@@ -192,6 +260,7 @@
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
@@ -215,12 +284,12 @@
                             </div>
                             <br>
                             <!-- CoREbecue Images -->
-                            <div class="ui four column grid">
+                            <div class="ui four column center aligned grid">
                                 <div class="column">
                                     <div class="item">
                                         <div id="corebecue-image-1" class="image content">
-                                            <div class="ui centered small bordered images">
-                                                <img src="assets/images/corebecue/corebecue-1.JPG">
+                                            <div class="ui centered small bordered stackable image">
+                                                <img src="assets/images/corebecue/corebecue-1.jpg">
                                             </div>
                                         </div>
                                         <div id="corebecue-modal-1" class="ui small modal">
@@ -229,12 +298,12 @@
                                                 CoREbecue
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered big bordered images">
-                                                        <img src="assets/images/corebecue/corebecue-1.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered big bordered stackable image">
+                                                        <img src="assets/images/corebecue/corebecue-1.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         Current members and alumni having a barbecue at a local park.
                                                     </p>
@@ -248,14 +317,15 @@
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="corebecue-image-2" class="image content">
-                                            <div class="ui centered small bordered images">
-                                                <img src="assets/images/corebecue/corebecue-2.JPG">
+                                            <div class="ui centered small bordered stackable image">
+                                                <img src="assets/images/corebecue/corebecue-2.jpg">
                                             </div>
                                         </div>
                                         <div id="corebecue-modal-2" class="ui small modal">
@@ -264,19 +334,19 @@
                                                 CoREbecue
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered big bordered images">
-                                                        <img src="assets/images/corebecue/corebecue-2.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered big bordered stackable image">
+                                                        <img src="assets/images/corebecue/corebecue-2.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         Current members and alumni sharing stories.
                                                     </p>
                                                 </div>
                                                 <br>
                                                 <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
+                                                    <div class="ui left floated left labeled icon stackable button">
                                                         <i class="left arrow icon"></i>
                                                         Previous
                                                     </div>
@@ -287,14 +357,15 @@
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="corebecue-image-3" class="image content">
-                                            <div class="ui centered small bordered images">
-                                                <img src="assets/images/corebecue/corebecue-3.JPG">
+                                            <div class="ui centered small bordered stackable image">
+                                                <img src="assets/images/corebecue/corebecue-3.jpg">
                                             </div>
                                         </div>
                                         <div id="corebecue-modal-3" class="ui small modal">
@@ -303,12 +374,12 @@
                                                 CoREbecue
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered big bordered images">
-                                                        <img src="assets/images/corebecue/corebecue-3.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered big bordered stackable image">
+                                                        <img src="assets/images/corebecue/corebecue-3.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         Current members and alumni playing frisbee.
                                                     </p>
@@ -326,14 +397,15 @@
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="corebecue-image-4" class="image content">
-                                            <div class="ui centered small bordered images">
-                                                <img src="assets/images/corebecue/corebecue-4.JPG">
+                                            <div class="ui centered small bordered stackable image">
+                                                <img src="assets/images/corebecue/corebecue-4.jpg">
                                             </div>
                                         </div>
                                         <div id="corebecue-modal-4" class="ui small modal">
@@ -342,12 +414,12 @@
                                                 CoREbecue
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered big bordered images">
-                                                        <img src="assets/images/corebecue/corebecue-4.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered big bordered stackable image">
+                                                        <img src="assets/images/corebecue/corebecue-4.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         Current members and alumni playing frisbee.
                                                     </p>
@@ -361,6 +433,7 @@
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
@@ -384,12 +457,12 @@
                             </div>
                             <br>
                             <!-- CoRE Hacks Images -->
-                            <div class="ui four column grid">
+                            <div class="ui four column center aligned grid">
                                 <div class="column">
                                     <div class="item">
                                         <div id="core-hacks-image-1" class="image content">
-                                            <div class="ui centered tiny bordered images">
-                                                <img src="assets/images/core-hacks/core-hacks-1.JPG">
+                                            <div class="ui centered tiny bordered stackable image">
+                                                <img src="assets/images/core-hacks/core-hacks-1.jpg">
                                             </div>
                                         </div>
                                         <div id="core-hacks-modal-1" class="ui small modal">
@@ -398,12 +471,12 @@
                                                 CoRE Hacks
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered medium bordered images">
-                                                        <img src="assets/images/core-hacks/core-hacks-1.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered medium bordered stackable image">
+                                                        <img src="assets/images/core-hacks/core-hacks-1.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         Current members working on his project.
                                                     </p>
@@ -414,17 +487,19 @@
                                                         <i class="right arrow icon"></i>
                                                         Next
                                                     </div>
+                                                    <br>
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="core-hacks-image-2" class="image content">
-                                            <div class="ui centered tiny bordered images">
-                                                <img src="assets/images/core-hacks/core-hacks-2.JPG">
+                                            <div class="ui centered tiny bordered stackable image">
+                                                <img src="assets/images/core-hacks/core-hacks-2.jpg ">
                                             </div>
                                         </div>
                                         <div id="core-hacks-modal-2" class="ui small modal">
@@ -433,19 +508,19 @@
                                                 CoRE Hacks
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered medium bordered images">
-                                                        <img src="assets/images/core-hacks/core-hacks-2.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered medium bordered stackable image">
+                                                        <img src="assets/images/core-hacks/core-hacks-2.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         Current members and alumni eating pizza and sharing stories.
                                                     </p>
                                                 </div>
                                                 <br>
                                                 <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
+                                                    <div class="ui left floated left labeled icon stackable button">
                                                         <i class="left arrow icon"></i>
                                                         Previous
                                                     </div>
@@ -453,17 +528,19 @@
                                                         <i class="right arrow icon"></i>
                                                         Next
                                                     </div>
+                                                    <br>
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="core-hacks-image-3" class="image content">
-                                            <div class="ui centered tiny bordered images">
-                                                <img src="assets/images/core-hacks/core-hacks-3.JPG">
+                                            <div class="ui centered tiny bordered stackable image">
+                                                <img src="assets/images/core-hacks/core-hacks-3.jpg">
                                             </div>
                                         </div>
                                         <div id="core-hacks-modal-3" class="ui small modal">
@@ -472,19 +549,19 @@
                                                 CoRE Hacks
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered medium bordered images">
-                                                        <img src="assets/images/core-hacks/core-hacks-3.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered medium bordered stackable image">
+                                                        <img src="assets/images/core-hacks/core-hacks-3.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         Current member presenting his project to alumni judges.
                                                     </p>
                                                 </div>
                                                 <br>
                                                 <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
+                                                    <div class="ui left floated left labeled icon stackable button">
                                                         <i class="left arrow icon"></i>
                                                         Previous
                                                     </div>
@@ -492,17 +569,19 @@
                                                         <i class="right arrow icon"></i>
                                                         Next
                                                     </div>
+                                                    <br>
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column">
                                     <div class="item">
                                         <div id="core-hacks-image-4" class="image content">
-                                            <div class="ui centered tiny bordered images">
-                                                <img src="assets/images/core-hacks/core-hacks-4.JPG">
+                                            <div class="ui centered tiny bordered stackable image">
+                                                <img src="assets/images/core-hacks/core-hacks-4.jpg">
                                             </div>
                                         </div>
                                         <div id="core-hacks-modal-4" class="ui small modal">
@@ -511,25 +590,26 @@
                                                 CoRE Hacks
                                             </div>
                                             <div class="image content">
-                                                <div class="image">
-                                                    <div class="ui centered medium bordered images">
-                                                        <img src="assets/images/core-hacks/core-hacks-4.JPG">
+                                                <div class="hard-code-centered image">
+                                                    <div class="ui centered medium bordered stackable image">
+                                                        <img src="assets/images/core-hacks/core-hacks-4.jpg">
                                                     </div>
                                                 </div>
-                                                <div class="description">
+                                                <div class="hard-code-centered description">
                                                     <p>
                                                         Current member presenting his project to alumni judges.
                                                     </p>
                                                 </div>
                                                 <br>
                                                 <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
+                                                    <div class="ui left floated left labeled stackable icon button">
                                                         <i class="left arrow icon"></i>
                                                         Previous
                                                     </div>
                                                 </div>
                                                 <br>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
@@ -578,65 +658,4 @@
 </body>
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="semantic/dist/semantic.min.js"></script>
-<script>
-    // Modals for CoRE Lore
-    $('#core-lore-modal-1')
-      .modal('attach events', '#core-lore-image-1', 'show')
-      .modal('attach events', '#core-lore-modal-2 .ui.left.floated.left.labeled.icon.button')
-    ;
-    $('#core-lore-modal-2')
-      .modal('attach events', '#core-lore-image-2', 'show')
-      .modal('attach events', '#core-lore-modal-3 .ui.left.floated.left.labeled.icon.button')
-      .modal('attach events', '#core-lore-modal-1 .ui.right.floated.right.labeled.icon.button')
-    ;
-    $('#core-lore-modal-3')
-      .modal('attach events', '#core-lore-image-3', 'show')
-      .modal('attach events', '#core-lore-modal-4 .ui.left.floated.left.labeled.icon.button')
-      .modal('attach events', '#core-lore-modal-2 .ui.right.floated.right.labeled.icon.button')
-    ;
-    $('#core-lore-modal-4')
-      .modal('attach events', '#core-lore-image-4', 'show')
-      .modal('attach events', '#core-lore-modal-3 .ui.right.floated.right.labeled.icon.button')
-    ;
-
-    // Modals for CoREbecue
-    $('#corebecue-modal-1')
-      .modal('attach events', '#corebecue-image-1', 'show')
-      .modal('attach events', '#corebecue-modal-2 .ui.left.floated.left.labeled.icon.button')
-    ;
-    $('#corebecue-modal-2')
-      .modal('attach events', '#corebecue-image-2', 'show')
-      .modal('attach events', '#corebecue-modal-3 .ui.left.floated.left.labeled.icon.button')
-      .modal('attach events', '#corebecue-modal-1 .ui.right.floated.right.labeled.icon.button')
-    ;
-    $('#corebecue-modal-3')
-      .modal('attach events', '#corebecue-image-3', 'show')
-      .modal('attach events', '#corebecue-modal-4 .ui.left.floated.left.labeled.icon.button')
-      .modal('attach events', '#corebecue-modal-2 .ui.right.floated.right.labeled.icon.button')
-    ;
-    $('#corebecue-modal-4')
-      .modal('attach events', '#corebecue-image-4', 'show')
-      .modal('attach events', '#corebecue-modal-3 .ui.right.floated.right.labeled.icon.button')
-    ;
-
-    // Modals for CoRE Hacks
-    $('#core-hacks-modal-1')
-      .modal('attach events', '#core-hacks-image-1', 'show')
-      .modal('attach events', '#core-hacks-modal-2 .ui.left.floated.left.labeled.icon.button')
-    ;
-    $('#core-hacks-modal-2')
-      .modal('attach events', '#core-hacks-image-2', 'show')
-      .modal('attach events', '#core-hacks-modal-3 .ui.left.floated.left.labeled.icon.button')
-      .modal('attach events', '#core-hacks-modal-1 .ui.right.floated.right.labeled.icon.button')
-    ;
-    $('#core-hacks-modal-3')
-      .modal('attach events', '#core-hacks-image-3', 'show')
-      .modal('attach events', '#core-hacks-modal-4 .ui.left.floated.left.labeled.icon.button')
-      .modal('attach events', '#core-hacks-modal-2 .ui.right.floated.right.labeled.icon.button')
-    ;
-    $('#core-hacks-modal-4')
-      .modal('attach events', '#core-hacks-image-4', 'show')
-      .modal('attach events', '#core-hacks-modal-3 .ui.right.floated.right.labeled.icon.button')
-    ;
-</script>
 </html>
