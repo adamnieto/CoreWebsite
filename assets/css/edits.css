@@ -1,0 +1,10 @@
+#banner-image {
+    margin-bottom:-30%;
+}
+.ui.modal > .image.content {
+  display: block !important;
+}
+
+.ui.modal > .content > .image {
+  width: 100% !important;
+}
