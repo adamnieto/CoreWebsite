@@ -19,10 +19,9 @@
   width: 100% !important;
 }
 /* iPad Landscape */
-@media only screen and (height: 1536px) {
+@media only screen and (height: 1024px) {
     .computer.only,
     .large.monitor.only,
-    .device
     .widescreen.monitor.only {
         display: none !important;
     }
