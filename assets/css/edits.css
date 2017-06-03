@@ -18,3 +18,14 @@
 .ui.modal > .content > .image {
   width: 100% !important;
 }
+/* iPad Landscape */
+@media only screen and (height: 768px) {
+    .computer.only,
+    .large.monitor.only,
+    .widescreen.monitor.only {
+        display: none !important;
+    }
+    .device.only{
+        display: center  !important;
+    }
+}
