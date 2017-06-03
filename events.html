@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="semantic/dist/semantic.css" media="screen">
     <link rel="stylesheet" href="assets/css/edits.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- pre-loads images -->
+    <script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-1.jpg",
+				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-2.jpg",
+				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-3.jpg",
+				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-4.jpg",
+				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-5.jpg",
+				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-6.jpg",
+                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/coding-workshop/coding-workshop-1.jpg",
+                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/coding-workshop/coding-workshop-2.jpg",
+                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/coding-workshop/coding-workshop-3.jpg",
+                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/coding-workshop/coding-workshop-4.jpg"
+			)
+		//--><!]]>
+	</script>
 </head>
 
 <body>
