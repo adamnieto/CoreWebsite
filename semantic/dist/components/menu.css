@@ -1312,8 +1312,8 @@ Floated Menu / Item
 }
 .ui.menu .violet.active.item,
 .ui.violet.menu .active.item {
-  border-color: #9381FF !important;
-  color: #9381FF !important;
+  border-color: #7A5CE0 !important;
+  color: #7A5CE0 !important;
 }
 .ui.menu .purple.active.item,
 .ui.purple.menu .active.item {
@@ -1542,7 +1542,7 @@ Floated Menu / Item
 /* Violet */
 .ui.inverted.menu .violet.active.item,
 .ui.inverted.violet.menu {
-  background-color: #9381FF;
+  background-color: #7A5CE0;
 }
 .ui.inverted.violet.menu .item:before {
   background-color: rgba(34, 36, 38, 0.1);
