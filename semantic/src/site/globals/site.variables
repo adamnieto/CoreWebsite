@@ -5,5 +5,7 @@
 #06A77D
 #909BEA
 #ABE188
+#88D498 -Adam Likes
 */
-@pageBackground: #88D498;
+@pageBackground: #3BCEAC;
+@violet: #9381FF;
