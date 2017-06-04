@@ -1,5 +1,9 @@
 /*******************************
      User Global Variables
 *******************************/
-
-@pageBackground: #06A77D;
+/*
+#06A77D
+#909BEA
+#ABE188
+*/
+@pageBackground: #88D498;
