@@ -2,7 +2,7 @@
     margin-bottom:-30%;
 }
 .ui.modal > .image.content {
-  display: block !important;
+    display: block !important;
 }
 .ui.modal > .image {
     display: flex !important;
@@ -16,5 +16,18 @@
 }
 
 .ui.modal > .content > .image {
-  width: 100% !important;
+    width: 100% !important;
+}
+
+.corebot {
+    /* Each corebot in the spritesheet has a dimension of 800x600  */
+    width: 800px;
+    height: 600px;
+    background: url('../images/corebot/corebot_spritesheet.png');
+    animation: animate_corebot 8.0s steps(8) infinite;
+}
+
+@keyframes animate_corebot {
+    /* corebot_spreadsheet total dimenstions = 6400 × 600 */
+    100% { background-position: -6400px; }
 }
