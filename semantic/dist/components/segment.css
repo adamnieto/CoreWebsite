@@ -569,10 +569,10 @@
 
 /* Violet */
 .ui.violet.segment:not(.inverted) {
-  border-top: 2px solid #6435C9;
+  border-top: 2px solid #7A5CE0;
 }
 .ui.inverted.violet.segment {
-  background-color: #6435C9 !important;
+  background-color: #7A5CE0 !important;
   color: #FFFFFF !important;
 }
 

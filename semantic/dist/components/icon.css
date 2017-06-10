@@ -308,14 +308,14 @@ i.inverted.circular.blue.icon {
 
 /* Violet */
 i.violet.icon {
-  color: #6435C9 !important;
+  color: #7A5CE0 !important;
 }
 i.inverted.violet.icon {
   color: #A291FB !important;
 }
 i.inverted.bordered.violet.icon,
 i.inverted.circular.violet.icon {
-  background-color: #6435C9 !important;
+  background-color: #7A5CE0 !important;
   color: #FFFFFF !important;
 }
 

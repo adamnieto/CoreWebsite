@@ -5,5 +5,12 @@
 #06A77D
 #909BEA
 #ABE188
+#88D498 -Adam Likes
+#3BCEAC
+#06D6A0
+#9381FF
+#1446A0
+#1048B2
 */
-@pageBackground: #88D498;
+@pageBackground: #1A936F;
+@violet: #7A5CE0;

@@ -463,13 +463,13 @@ a.ui.inverted.blue.header:hover {
 /*--- Violet ---*/
 
 .ui.violet.header {
-  color: #6435C9 !important;
+  color: #7A5CE0 !important;
 }
 a.ui.violet.header:hover {
-  color: #5829bb !important;
+  color: #643fe3 !important;
 }
 .ui.violet.dividing.header {
-  border-bottom: 2px solid #6435C9;
+  border-bottom: 2px solid #7A5CE0;
 }
 
 /* Inverted */
