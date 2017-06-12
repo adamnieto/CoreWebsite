@@ -19,39 +19,7 @@
     <link rel="stylesheet" href="assets/css/edits.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- pre-loads images -->
-    <script type="text/javascript">
-		<!--//--><![CDATA[//><!--
-			var images = new Array()
-			function preload() {
-				for (i = 0; i < preload.arguments.length; i++) {
-					images[i] = new Image()
-					images[i].src = preload.arguments[i]
-				}
-			}
-			preload(
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-lore/core-lore-1.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-lore/core-lore-2.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-lore/core-lore-3.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-lore/core-lore-4.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-hacks/core-hacks-1.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-hacks/core-hacks-2.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-hacks/core-hacks-3.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-hacks/core-hacks-4.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/corebecue/corebecue-1.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/corebecue/corebecue-2.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/corebecue/corebecue-3.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/corebecue/corebecue-4.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-project-fair/core-project-fair-1.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-project-fair/core-project-fair-2.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-project-fair/core-project-fair-3.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/core-project-fair/core-project-fair-4.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/senior-send-off/senior-send-off-1.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/senior-send-off/senior-send-off-2.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/senior-send-off/senior-send-off-3.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/senior-send-off/senior-send-off-4.jpg"
-			)
-		//--><!]]>
-	</script>
+    <script type="text/javascript" src="images.php"></script>
 </head>
 <body>
     <nav class="ui borderless stackable menu">
@@ -91,145 +59,40 @@
                             <br>
                             <!-- CoRE Lore Images -->
                             <div class="ui device only center aligned grid">
-                                <button id="core-lore-gallery" class="big violet ui button">
+                                <button onclick="refreshImage('core-lore')" class="pic big green ui button">
                                     <i class="small image icon"></i> Photo Gallery
                                 </button>
                             </div>
                             </br>
                             <div class="ui computer only four column center aligned grid">
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-lore-modal-1" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Lore - 1 of 4
-                                            </div>
-                                                <div class="ui image content">
-                                                    <div class="hard-code-centered image">
-                                                        <div class="ui centered big bordered stackable image">
-                                                            <img src="assets/images/core-lore/core-lore-1.jpg">
-                                                        </div>
-                                                    </div>
-                                                    <div class="hard-code-centered description">
-                                                        <p>
-                                                            Alumnus recounting stories from his time on CoRE.
-                                                        </p>
-                                                    </div>
-                                                    <br>
-                                                    <div class="actions">
-                                                        <div class="ui right floated right labeled icon button">
-                                                            <i class="right arrow icon"></i>
-                                                            Next
-                                                        </div>
-                                                    </div>
-                                                    <br>
+                            <div class="column">
+                                <div class="item">
+                                    <div class="ui small modal">
+                                        <i class="close icon"></i>
+                                        <div class="image content">
+                                            <div class="hard-code-centered image">
+                                                <div class="ui centered big bordered stackable image">
+                                                    <img id="picture" src="">
                                                 </div>
+                                            </div>
                                             <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-lore-modal-2" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Lore - 2 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/core-lore/core-lore-2.jpg">
-                                                    </div>
+                                            <div class="actions">
+                                                <div class="ui right floated right labeled icon button" id="next">
+                                                    <i class="right arrow icon"></i>
+                                                    Next
                                                 </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members and alumni eating a thanksgiving feast together.
-                                                    </p>
+                                                <div class="ui left floated left labeled icon button" id="prev">
+                                                    <i class="left arrow icon"></i>
+                                                    Previous
                                                 </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
                                             </div>
                                             <br>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-lore-modal-3" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Lore - 3 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/core-lore/core-lore-3.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members and alumni eating a thanksgiving feast together.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-lore-modal-4" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Lore - 4 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/core-lore/core-lore-4.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members and alumni playing games.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
+                                        <br>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <!-- CoREbecue -->
@@ -251,145 +114,11 @@
                             <br>
                             <!-- CoREbecue Images -->
                             <div class="ui device only center aligned grid">
-                                <button id="corebecue-gallery" class="big violet ui button">
+                                <button onclick="refreshImage('corebecue')" class="pic big green ui button">
                                     <i class="small image icon"></i> Photo Gallery
                                 </button>
                             </div>
                             <br>
-                            <div class="ui computer only four column center aligned grid">
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="corebecue-modal-1" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoREbecue - 1 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/corebecue/corebecue-1.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Current members and alumni having a barbecue at a local park.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="corebecue-modal-2" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoREbecue - 2 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/corebecue/corebecue-2.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Current members and alumni sharing stories.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon stackable button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="corebecue-modal-3" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoREbecue - 3 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/corebecue/corebecue-3.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Current members and alumni playing frisbee.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="corebecue-modal-4" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoREbecue - 4 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/corebecue/corebecue-4.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Current members and alumni playing frisbee.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- CoRE Hacks -->
@@ -411,145 +140,11 @@
                             <br>
                             <!-- CoRE Hacks Images -->
                             <div class="ui device only center aligned grid">
-                                <button id="core-hacks-gallery" class="big violet ui button">
+                                <button onclick="refreshImage('core-hacks')" class="pic big green ui button">
                                     <i class="small image icon"></i> Photo Gallery
                                 </button>
                             </div>
                             <br>
-                            <div class="ui computer only four column center aligned grid">
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-hacks-modal-1" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Hacks - 1 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered medium bordered stackable image">
-                                                        <img src="assets/images/core-hacks/core-hacks-1.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Current member working on his project.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-hacks-modal-2" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Hacks - 2 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered medium bordered stackable image">
-                                                        <img src="assets/images/core-hacks/core-hacks-2.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Current members and alumni eating pizza and sharing stories.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon stackable button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-hacks-modal-3" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Hacks - 3 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered medium bordered stackable image">
-                                                        <img src="assets/images/core-hacks/core-hacks-3.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Current member presenting his project to alumni judges.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon stackable button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-hacks-modal-4" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Hacks - 4 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered medium bordered stackable image">
-                                                        <img src="assets/images/core-hacks/core-hacks-4.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Current member presenting his project to alumni judges.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled stackable icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- CoRE Project Fair -->
@@ -571,145 +166,11 @@
                             <br>
                             <!-- CoRE Project Fair Images -->
                             <div class="ui device only center aligned grid">
-                                <button id="core-project-fair-gallery" class="big violet ui button">
+                                <button onclick="refreshImage('core-project-fair')" class="pic big green ui button">
                                     <i class="small image icon"></i> Photo Gallery
                                 </button>
                             </div>
                             <br>
-                            <div class="ui computer only four column center aligned grid">
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-project-fair-modal-1" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Project Fair - 1 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui big bordered stackable image">
-                                                        <img src="assets/images/core-project-fair/core-project-fair-1.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE member showing his project to the CoRE faculty advisor.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-project-fair-modal-2" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Project Fair - 2 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/core-project-fair/core-project-fair-2.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members presenting their projects.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon stackable button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-project-fair-modal-3" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Project Fair - 3 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/core-project-fair/core-project-fair-3.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members presenting their projects.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon stackable button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="core-project-fair-modal-4" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                CoRE Project Fair - 4 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/core-project-fair/core-project-fair-4.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members presenting their projects.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled stackable icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- Senior Send-Off -->
@@ -731,145 +192,11 @@
                             <br>
                             <!-- Senior Send-Off Images -->
                             <div class="ui device only center aligned grid">
-                                <button id="senior-send-off-gallery" class="big violet ui button">
+                                <button onclick="refreshImage('senior-send-off')" class="pic big green ui button">
                                     <i class="small image icon"></i> Photo Gallery
                                 </button>
                             </div>
                             <br>
-                            <div class="ui computer only four column center aligned grid">
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="senior-send-off-modal-1" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Senior Send-Off - 1 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui big bordered stackable image">
-                                                        <img src="assets/images/senior-send-off/senior-send-off-1.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members playing board games.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="senior-send-off-modal-2" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Senior Send-Off - 2 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/senior-send-off/senior-send-off-2.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members playing video games.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon stackable button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="senior-send-off-modal-3" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Senior Send-Off - 3 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/senior-send-off/senior-send-off-3.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE seniors
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon stackable button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="senior-send-off-modal-4" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Senior Send-Off - 4 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/senior-send-off/senior-send-off-4.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE seniors presented with their personalized gift from the underclassmen.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled stackable icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -881,109 +208,8 @@
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="semantic/dist/semantic.min.js"></script>
 <script>
-    // Modals for CoRE Lore
-    $('#core-lore-modal-1')
-        .modal('attach events', '#core-lore-image-1', 'show')
-        .modal('attach events', '#core-lore-gallery', 'show')
-        .modal('attach events', '#core-lore-modal-2 .ui.left.floated.left.labeled.icon.button', 'show')
-    ;
-    $('#core-lore-modal-2')
-        .modal('attach events', '#core-lore-image-2', 'show')
-        .modal('attach events', '#core-lore-modal-3 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#core-lore-modal-1 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#core-lore-modal-3')
-        .modal('attach events', '#core-lore-image-3', 'show')
-        .modal('attach events', '#core-lore-modal-4 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#core-lore-modal-2 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#core-lore-modal-4')
-        .modal('attach events', '#core-lore-image-4', 'show')
-        .modal('attach events', '#core-lore-modal-3 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-
-    // Modals for CoREbecue
-    $('#corebecue-modal-1')
-        .modal('attach events', '#corebecue-image-1', 'show')
-        .modal('attach events', '#corebecue-gallery', 'show')
-        .modal('attach events', '#corebecue-modal-2 .ui.left.floated.left.labeled.icon.button', 'show')
-    ;
-    $('#corebecue-modal-2')
-        .modal('attach events', '#corebecue-image-2', 'show')
-        .modal('attach events', '#corebecue-modal-3 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#corebecue-modal-1 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#corebecue-modal-3')
-        .modal('attach events', '#corebecue-image-3', 'show')
-        .modal('attach events', '#corebecue-modal-4 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#corebecue-modal-2 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#corebecue-modal-4')
-        .modal('attach events', '#corebecue-image-4', 'show')
-        .modal('attach events', '#corebecue-modal-3 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-
-    // Modals for CoRE Hacks
-    $('#core-hacks-modal-1')
-        .modal('attach events', '#core-hacks-image-1', 'show')
-        .modal('attach events', '#core-hacks-gallery', 'show')
-        .modal('attach events', '#core-hacks-modal-2 .ui.left.floated.left.labeled.icon.button', 'show')
-    ;
-    $('#core-hacks-modal-2')
-        .modal('attach events', '#core-hacks-image-2', 'show')
-        .modal('attach events', '#core-hacks-modal-3 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#core-hacks-modal-1 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#core-hacks-modal-3')
-        .modal('attach events', '#core-hacks-image-3', 'show')
-        .modal('attach events', '#core-hacks-modal-4 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#core-hacks-modal-2 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#core-hacks-modal-4')
-        .modal('attach events', '#core-hacks-image-4', 'show')
-        .modal('attach events', '#core-hacks-modal-3 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-
-    // Modals for CoRE Project Fair
-    $('#core-project-fair-modal-1')
-        .modal('attach events', '#core-project-fair-image-1', 'show')
-        .modal('attach events', '#core-project-fair-gallery', 'show')
-        .modal('attach events', '#core-project-fair-modal-2 .ui.left.floated.left.labeled.icon.button', 'show')
-    ;
-    $('#core-project-fair-modal-2')
-        .modal('attach events', '#core-project-fair-image-2', 'show')
-        .modal('attach events', '#core-project-fair-modal-3 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#core-project-fair-modal-1 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#core-project-fair-modal-3')
-        .modal('attach events', '#core-project-fair-image-3', 'show')
-        .modal('attach events', '#core-project-fair-modal-4 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#core-project-fair-modal-2 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#core-project-fair-modal-4')
-        .modal('attach events', '#core-project-fair-image-4', 'show')
-        .modal('attach events', '#core-project-fair-modal-3 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-
-    // Modals for Senior Send-Off
-    $('#senior-send-off-modal-1')
-        .modal('attach events', '#senior-send-off-image-1', 'show')
-        .modal('attach events', '#senior-send-off-gallery', 'show')
-        .modal('attach events', '#senior-send-off-modal-2 .ui.left.floated.left.labeled.icon.button', 'show')
-    ;
-    $('#senior-send-off-modal-2')
-        .modal('attach events', '#senior-send-off-image-2', 'show')
-        .modal('attach events', '#senior-send-off-modal-3 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#senior-send-off-modal-1 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#senior-send-off-modal-3')
-        .modal('attach events', '#senior-send-off-image-3', 'show')
-        .modal('attach events', '#senior-send-off-modal-4 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#senior-send-off-modal-2 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#senior-send-off-modal-4')
-        .modal('attach events', '#senior-send-off-image-4', 'show')
-        .modal('attach events', '#senior-send-off-modal-3 .ui.right.floated.right.labeled.icon.button', 'show')
+    $('.ui.modal')
+    .modal('attach events', '.pic', 'show')
     ;
 </script>
 </html>
