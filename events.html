@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="assets/css/edits.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     
-    <script type="text/javascript" src="images.php"></script>
 </head>
 
 <body>
@@ -69,12 +68,12 @@
                         <div class="ui computer only four column center aligned grid">
                             <div class="column">
                                 <div class="item">
-                                    <div class="ui small modal">
+                                    <div class="ui small modal" id="gallery-modal">
                                         <i class="close icon"></i>
                                         <div class="image content">
                                             <div class="hard-code-centered image">
                                                 <div class="ui centered big bordered stackable image">
-                                                    <img id="picture" src="">
+                                                    <img id="picture" src="assets/images/escape-the-room/escape-the-room-1.JPG">
                                                 </div>
                                             </div>
                                             <br>
@@ -162,12 +161,7 @@
 </div>
 </div>
 <br>
+<script type="text/javascript" src="images.php"></script>
 </body><script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="semantic/dist/semantic.min.js"></script>
-<script type="text/javascript">
-    $('.ui.modal')
-    .modal('attach events', '.pic', 'show')
-    ;
-
-</script>
 </html>
