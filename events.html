@@ -18,30 +18,7 @@
     <link rel="stylesheet" href="semantic/dist/semantic.css" media="screen">
     <link rel="stylesheet" href="assets/css/edits.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <!-- pre-loads images -->
-    <script type="text/javascript">
-		<!--//--><![CDATA[//><!--
-			var images = new Array()
-			function preload() {
-				for (i = 0; i < preload.arguments.length; i++) {
-					images[i] = new Image()
-					images[i].src = preload.arguments[i]
-				}
-			}
-			preload(
-				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-1.jpg",
-				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-2.jpg",
-				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-3.jpg",
-				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-4.jpg",
-				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-5.jpg",
-				"http://core.binghamton.edu/~anieto1/corewebsite/assets/images/escape-the-room/escape-the-room-6.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/coding-workshop/coding-workshop-1.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/coding-workshop/coding-workshop-2.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/coding-workshop/coding-workshop-3.jpg",
-                "http://core.binghamton.edu/~anieto1/corewebsite/assets/images/coding-workshop/coding-workshop-4.jpg"
-			)
-		//--><!]]>
-	</script>
+    
 </head>
 
 <body>
@@ -83,468 +60,108 @@
                             <br>
                             <!-- Escape The Room Images -->
                             <div class="ui device only center aligned grid ipad">
-                                <button id="escape-gallery" class="big violet ui button">
-                                    <i class="small image icon"></i> Photo Gallery
-                                </button>
-                            </div>
-                            <br>
-                            <div class="ui six column center aligned grid">
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="escape-modal-1" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Escape The Room - 1 of 6
+                                <button class="pic big green ui button" 
+                                onclick="refreshImage('escape-the-room')">
+                                <i class="small image icon"></i> Photo Gallery
+                            </button>
+                        </div>
+                        <div class="ui computer only four column center aligned grid">
+                            <div class="column">
+                                <div class="item">
+                                    <div class="ui small modal" id="gallery-modal">
+                                        <i class="close icon"></i>
+                                        <div class="image content">
+                                            <div class="hard-code-centered image">
+                                                <div class="ui centered big bordered stackable image">
+                                                    <img id="picture" src="assets/images/escape-the-room/escape-the-room-1.JPG">
+                                                </div>
                                             </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/escape-the-room/escape-the-room-1.jpg">
-                                                    </div>
+                                            <br>
+                                            <div class="actions">
+                                                <div class="ui right floated right labeled icon button" id="next">
+                                                    <i class="right arrow icon"></i>
+                                                    Next
                                                 </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members act as game masters for the escape the room participants.
-                                                    </p>
+                                                <div class="ui left floated left labeled icon button" id="prev">
+                                                    <i class="left arrow icon"></i>
+                                                    Previous
                                                 </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
                                             </div>
                                             <br>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="escape-modal-2" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Escape The Room - 2 of 6
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/escape-the-room/escape-the-room-2.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        The doors to the O'Connor great room where the event was hosted.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="escape-modal-3" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Escape The Room - 3 of 6
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/escape-the-room/escape-the-room-3.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Edgar Allan Poe themed decorations.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="escape-modal-4" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Escape The Room - 4 of 6
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/escape-the-room/escape-the-room-4.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Edgar Allan Poe themed decorations.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="escape-modal-5" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Escape The Room - 5 of 6
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/escape-the-room/escape-the-room-5.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Edgar Allan Poe themed decorations.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="escape-modal-6" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Escape The Room - 6 of 6
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/escape-the-room/escape-the-room-6.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        Edgar Allan Poe themed decorations.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
+                                        <br>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <br>
                     </div>
-                    <!-- Coding Workshop -->
-                    <div style="font-size: 18px;" class="ui segment">
-                        <div class="content">
-                            <h2 class="header">
-                                <div class="image">
-                                    <i class="big code icon"></i>
-                                    Coding Workshops
-                                </div>
-                            </h2>
-                            <div class="description">
-                                <p>
-                                    In an effort to spread the joys of coding, CoRE has hosted various coding workshops. Students from all across Binghamton have shown up to learn about coding and we hope they left with a newfound appreciation or even hobby.
-                                </p>
+                </div>
+                <!-- Coding Workshop -->
+                <div style="font-size: 18px;" class="ui segment">
+                    <div class="content">
+                        <h2 class="header">
+                            <div class="image">
+                                <i class="big code icon"></i>
+                                Coding Workshops
                             </div>
-                            <br>
-                            <br>
-                            <!-- Coding Workshop Images -->
-                            <div class="ui device only center aligned grid">
-                                <button id="coding-workshop-gallery" class="big violet ui button">
-                                    <i class="small image icon"></i> Photo Gallery
-                                </button>
-                            </div>
-                            <br>
-                            <div class="ui computer only four column center aligned grid">
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="coding-workshop-modal-1" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Coding Workshops - 1 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered big bordered stackable image">
-                                                        <img src="assets/images/coding-workshop/coding-workshop-1.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members instructing workshop attendees.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="coding-workshop-modal-2" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Coding Workshops - 2 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered medium bordered stackable image">
-                                                        <img src="assets/images/coding-workshop/coding-workshop-2.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members instructing workshop attendees.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="coding-workshop-modal-3" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Coding Workshops - 3 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered medium bordered stackable image">
-                                                        <img src="assets/images/coding-workshop/coding-workshop-3.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members instructing workshop attendees.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                    <div class="ui right floated right labeled icon button">
-                                                        <i class="right arrow icon"></i>
-                                                        Next
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="item">
-                                        <div id="coding-workshop-modal-4" class="ui small modal">
-                                            <i class="close icon"></i>
-                                            <div class="ui header">
-                                                Coding Workshops - 4 of 4
-                                            </div>
-                                            <div class="image content">
-                                                <div class="hard-code-centered image">
-                                                    <div class="ui centered medium bordered stackable image">
-                                                        <img src="assets/images/coding-workshop/coding-workshop-4.jpg">
-                                                    </div>
-                                                </div>
-                                                <div class="hard-code-centered description">
-                                                    <p>
-                                                        CoRE members instructing workshop attendees.
-                                                    </p>
-                                                </div>
-                                                <br>
-                                                <div class="actions">
-                                                    <div class="ui left floated left labeled icon button">
-                                                        <i class="left arrow icon"></i>
-                                                        Previous
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        </h2>
+                        <div class="description">
+                            <p>
+                                In an effort to spread the joys of coding, CoRE has hosted various coding workshops. Students from all across Binghamton have shown up to learn about coding and we hope they left with a newfound appreciation or even hobby.
+                            </p>
                         </div>
+                        <br>
+                        <br>
+                        <!-- Coding Workshop Images -->
+                        <div class="ui device only center aligned grid">
+                            <button class="pic big green ui button"
+                            onclick="refreshImage('coding-workshop')">
+                            <i class="small image icon"></i> Photo Gallery
+                        </button>
                     </div>
-                    <!-- Color Combat -->
-                    <div style="font-size: 18px;" class="ui segment">
-                        <div class="content">
-                            <h2 class="header">
-                                <div class="image">
-                                    <i class="big announcement icon"></i>
-                                    Color Combat
-                                </div>
-                            </h2>
-                            <div class="description">
-                                <p>
-                                    CoRE regularly participates in Color Combat, a Dickinson Community event. As Team CoREnge (orange), we spend a weekend in the Fall semester competing against various other teams in sports events, attendence events, and even scavenger hunts!
-                                </p>
-                            </div>
+                    <br>
+                </div>
+            </div>
+            <!-- Color Combat -->
+            <div style="font-size: 18px;" class="ui segment">
+                <div class="content">
+                    <h2 class="header">
+                        <div class="image">
+                            <i class="big announcement icon"></i>
+                            Color Combat
                         </div>
+                    </h2>
+                    <div class="description">
+                        <p>
+                            CoRE regularly participates in Color Combat, a Dickinson Community event. As Team CoREnge (orange), we spend a weekend in the Fall semester competing against various other teams in sports events, attendence events, and even scavenger hunts!
+                        </p>
                     </div>
-                    <!-- Mutant Mania -->
-                    <div style="font-size: 18px;" class="ui segment">
-                        <div class="content">
-                            <h2 class="header">
-                                <div class="image">
-                                    <i class="big lightning icon"></i>
-                                    Mutant Mania
-                                </div>
-                            </h2>
-                            <div class="description">
-                                <p>
-                                    Each year, CoRE hosts an event for Dickinson's Mutant Mania, a week-long event in the Spring semester where each Dickinson building competes against each other for the #1 title.
-                                    Past events have consisted of Human Hungry Hungry Hippos, catapualt building competitions, and miniature boat building competitions.
-                                </p>
-                            </div>
+                </div>
+            </div>
+            <!-- Mutant Mania -->
+            <div style="font-size: 18px;" class="ui segment">
+                <div class="content">
+                    <h2 class="header">
+                        <div class="image">
+                            <i class="big lightning icon"></i>
+                            Mutant Mania
                         </div>
+                    </h2>
+                    <div class="description">
+                        <p>
+                            Each year, CoRE hosts an event for Dickinson's Mutant Mania, a week-long event in the Spring semester where each Dickinson building competes against each other for the #1 title.
+                            Past events have consisted of Human Hungry Hungry Hippos, catapualt building competitions, and miniature boat building competitions.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
-</body>
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+</div>
+</div>
+<br>
+<script type="text/javascript" src="images.php"></script>
+</body><script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="semantic/dist/semantic.min.js"></script>
-<script>
-    // Modals for the Escape The Room event
-    $('#escape-modal-1')
-        .modal('attach events', '#escape-image-1', 'show')
-        .modal('attach events', '#escape-gallery', 'show')
-        .modal('attach events', '#escape-modal-2 .ui.left.floated.left.labeled.icon.button', 'show')
-    ;
-    $('#escape-modal-2')
-        .modal('attach events', '#escape-image-2', 'show')
-        .modal('attach events', '#escape-modal-3 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#escape-modal-1 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#escape-modal-3')
-        .modal('attach events', '#escape-image-3', 'show')
-        .modal('attach events', '#escape-modal-4 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#escape-modal-2 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#escape-modal-4')
-        .modal('attach events', '#escape-image-4', 'show')
-        .modal('attach events', '#escape-modal-5 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#escape-modal-3 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#escape-modal-5')
-        .modal('attach events', '#escape-image-5', 'show')
-        .modal('attach events', '#escape-modal-6 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#escape-modal-4 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#escape-modal-6')
-        .modal('attach events', '#escape-image-6', 'show')
-        .modal('attach events', '#escape-modal-5 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-
-    // Modals for the Coding Workshop event
-    $('#coding-workshop-modal-1')
-        .modal('attach events', '#coding-workshop-image-1', 'show')
-        .modal('attach events', '#coding-workshop-gallery', 'show')
-        .modal('attach events', '#coding-workshop-modal-2 .ui.left.floated.left.labeled.icon.button', 'show')
-    ;
-    $('#coding-workshop-modal-2')
-        .modal('attach events', '#coding-workshop-image-2', 'show')
-        .modal('attach events', '#coding-workshop-modal-3 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#coding-workshop-modal-1 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#coding-workshop-modal-3')
-        .modal('attach events', '#coding-workshop-image-3', 'show')
-        .modal('attach events', '#coding-workshop-modal-4 .ui.left.floated.left.labeled.icon.button', 'show')
-        .modal('attach events', '#coding-workshop-modal-2 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-    $('#coding-workshop-modal-4')
-        .modal('attach events', '#coding-workshop-image-4', 'show')
-        .modal('attach events', '#coding-workshop-modal-3 .ui.right.floated.right.labeled.icon.button', 'show')
-    ;
-</script>
 </html>
